@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "BiliTune",
+  "version": "0.1.0",
+  "description": "Click the extension icon on a Bilibili video page to download the best available audio stream.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://www.bilibili.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Download Bilibili Audio"
+  }
+}
