@@ -6,10 +6,12 @@
   "permissions": [
     "activeTab",
     "scripting",
-    "downloads"
+    "downloads",
+    "storage"
   ],
   "host_permissions": [
-    "https://www.bilibili.com/*"
+    "https://www.bilibili.com/*",
+    "https://api.bilibili.com/*"
   ],
   "background": {
     "service_worker": "background.js",

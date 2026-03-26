@@ -39,7 +39,13 @@ bilibili-audio-extension/
 
 - 下载能力依赖当前页面中的 `window.__playinfo__`
 - 如果页面结构或字段命名变化，插件需要同步调整
+- 当页面内未直接暴露可用音频流时，插件会尝试使用 `bvid + cid` 请求 B 站播放接口作为兜底
 - 当前实现保持轻量，未引入 `ffmpeg.wasm` 或其他媒体处理依赖
+
+## 调试说明
+
+- 插件会把最近一次执行结果保存到扩展本地存储 `chrome.storage.local.lastRun`
+- 如果某个页面失败，可以在扩展的 service worker 控制台里查看 `lastRun` 对应的错误阶段和页面上下文
 
 ## 使用边界
 
